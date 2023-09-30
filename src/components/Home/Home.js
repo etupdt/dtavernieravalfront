@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import image from '../../images/pexels-photo.webp';
 import image2 from '../../images/pexels-photo-1050558.webp';
 
 const Container = styled.div`
