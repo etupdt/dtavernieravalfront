@@ -4,12 +4,24 @@ backend:
 media_folder: "images" 
 #media_library: "/images/uploads"
 collections: 
+  - label: Images
+    name: images
+    widget: list
+    folder: "public/images/uploads"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    fields:
+      - {name: path, label: Image, widget: image}
+      - {name: alt, label: Alt, widget: string}
+      - {name: categorie, label: Categorie, widget: string}
   - name: "post"
     label: "Posts"
     label_singular: "Post"
     folder: "example/data/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
     editor:
       preview: false
     fields:
