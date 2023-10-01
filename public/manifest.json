@@ -1,4 +1,9 @@
 {
+  "photos": [
+    "/public/images/1691995111468.jpg",
+    "/public/images/2008.jpg",
+    "/public/images/c3.jpg"
+  ],
   "display": "standalone",
   "name": "Create React App Sample",
   "theme_color": "#000000",
