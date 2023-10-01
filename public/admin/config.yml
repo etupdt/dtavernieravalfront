@@ -24,10 +24,10 @@ collections:
             multiple: true
       - { label: "Location", name: "location", type: "Point", widget: "map", required: false }
       - { label: "Body", name: "body", widget: "text", required: false }
-  - label: Catégories
-    name: categopries
+  - name: categories
+    label: Catégories
     widget: list
-    folder: "public"
+    folder: "public/categories"
     create: true
     extension: "json"
     fields:
@@ -39,7 +39,7 @@ collections:
         default: ["Mariage", "Baptême", "Couple", "Bébé"]
   - name: "photos"
     label: "Photos"
-    folder: "public"
+    folder: "public/photos"
     create: true
     slug: "{{slug}}"
     extension: "json"
