@@ -43,6 +43,7 @@ const Button = styled.button`
   width: 50%;
   border-radius: 6px;
 `
+
 export default function Contact(){
   return(
     <>
