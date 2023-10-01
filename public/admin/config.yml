@@ -37,11 +37,6 @@ collections:
         widget: "list"
         allow_add: true
         default: ["Mariage", "Baptême", "Couple", "Bébé"]
-  - label: "Catégories"
-    name: "categories"
-    widget: "list"
-    allow_add: true
-    default: ["Mariage", "Baptême", "Couple", "Bébé"]
   - name: "photos"
     label: "Photos"
     folder: "public"
