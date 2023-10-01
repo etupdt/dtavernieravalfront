@@ -7,7 +7,6 @@ collections:
   - label: Images
     name: images
     widget: list
-    allow_multiple: true
     folder: "public/images/uploads"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -36,3 +35,19 @@ collections:
             multiple: true
       - { label: "Location", name: "location", type: "Point", widget: "map", required: false }
       - { label: "Body", name: "body", widget: "text", required: false }
+  - name: "categories"
+    label: "Catégories"
+    folder: "public"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    editor:
+      preview: false
+    fields:
+      - label: "Photos"
+        name: "photos"
+        widget: "image"
+        allow_multiple: true
+        media_library:
+          config:
+            multiple: true
