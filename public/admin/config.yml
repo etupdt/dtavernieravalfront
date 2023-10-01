@@ -24,21 +24,11 @@ collections:
             multiple: true
       - { label: "Location", name: "location", type: "Point", widget: "map", required: false }
       - { label: "Body", name: "body", widget: "text", required: false }
-  - label: Catégories
-    name: categopries
-    widget: list
-    folder: "public"
-    create: true
-    extension: "json"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - label: "Categorie"
-        name: "categorie"
-        widget: "string"
-        allow_multiple: true
-        media_library:
-          config:
-            multiple: true
+  - label: "Catégories"
+    name: "categories"
+    widget: "list"
+    allow_add: true
+    default: ["Mariage", "Baptême", "Couple", "Bébé"]
   - name: "photos"
     label: "Photos"
     folder: "public"
