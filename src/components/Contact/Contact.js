@@ -50,7 +50,13 @@ export default function Contact(){
       <Container>
         <Center>
           <H3>Contact</H3>
-          <Form name="contact" method="POST" data-netlify="true">
+          <Form 
+            name="contact" 
+            method="POST" 
+            data-netlify="true"
+            onSubmit="submit"
+          >
+            <Input type="hidden" name="form-name" value="contact"/>
             <P>
               <label>Nom <Input type="text" name="nom" placeholder="Nom"/></label>
             </P>
