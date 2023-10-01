@@ -24,6 +24,19 @@ collections:
             multiple: true
       - { label: "Location", name: "location", type: "Point", widget: "map", required: false }
       - { label: "Body", name: "body", widget: "text", required: false }
+  - label: Catégories
+    name: categopries
+    widget: list
+    folder: "public"
+    create: true
+    extension: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Entrées"
+        name: "entree"
+        widget: "list"
+        allow_add: true
+        default: ["Mariage", "Baptême", "Couple", "Bébé"]
   - label: "Catégories"
     name: "categories"
     widget: "list"
