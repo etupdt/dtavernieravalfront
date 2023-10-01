@@ -7,6 +7,7 @@ collections:
   - label: Images
     name: images
     widget: list
+    allow_multiple: true
     folder: "public/images/uploads"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
