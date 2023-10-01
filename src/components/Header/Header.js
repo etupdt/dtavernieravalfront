@@ -7,7 +7,6 @@ import burger from "../../images/burger.svg"
 import { Outlet } from 'react-router-dom';
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Contact from "../Contact/Contact"
 
 const Container = styled.div`
   display: flex;
