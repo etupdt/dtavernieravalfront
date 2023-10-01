@@ -52,9 +52,7 @@ export default function Contact(){
           <H3>Contact</H3>
           <Form 
             name="contact" 
-            method="POST" 
             data-netlify="true"
-            onSubmit="submit"
           >
             <Input type="hidden" name="form-name" value="contact"/>
             <P>
