@@ -137,27 +137,6 @@ function Header() {
         </Center>
       </Container>
       <Outlet/>
-          <form 
-            name="contact" 
-            method="POST" 
-            data-netlify="true"
-          >
-            <p>
-              <label>Nom <input type="text" name="nom" placeholder="Nom"/></label>
-            </p>
-            <p>
-              <label>Prénom <input type="text" name="prenom" placeholder="Prénom"/></label>
-            </p>
-            <p>
-              <label>Email <input type="email" name="email" placeholder="Email"/></label>
-            </p>
-            <p>
-              <label>Message <textarea type="email" name="message" placeholder="Message"/></label>
-            </p>
-            <p>
-              <button type="submit">Envoyer</button>
-            </p>
-          </form>
     </>
   );
 }
