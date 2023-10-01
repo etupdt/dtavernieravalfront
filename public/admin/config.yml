@@ -4,17 +4,6 @@ backend:
 media_folder: "public/images" 
 #media_library: "/images/uploads"
 collections: 
-  - label: Images
-    name: images
-    widget: list
-    folder: "public/images/uploads"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "json"
-    fields:
-      - {name: path, label: Image, widget: image}
-      - {name: alt, label: Alt, widget: string}
-      - {name: categorie, label: Categorie, widget: string}
   - name: "post"
     label: "Posts"
     label_singular: "Post"
@@ -35,15 +24,27 @@ collections:
             multiple: true
       - { label: "Location", name: "location", type: "Point", widget: "map", required: false }
       - { label: "Body", name: "body", widget: "text", required: false }
-  - name: "categories"
-    label: "Catégories"
+  - label: Catégories
+    name: categopries
+    widget: list
+    folder: "public"
+    extension: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Categorie"
+        name: "categorie"
+        widget: "string"
+        allow_multiple: true
+  - name: "photos"
+    label: "Photos"
     folder: "public"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     extension: "json"
     editor:
       preview: false
     fields:
+      - { label: "Title", name: "title", widget: "string" }
       - label: "Photos"
         name: "photos"
         widget: "image"
