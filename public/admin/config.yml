@@ -28,6 +28,7 @@ collections:
     name: categopries
     widget: list
     folder: "public"
+    create: true
     extension: "json"
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -35,6 +36,9 @@ collections:
         name: "categorie"
         widget: "string"
         allow_multiple: true
+        media_library:
+          config:
+            multiple: true
   - name: "photos"
     label: "Photos"
     folder: "public"
