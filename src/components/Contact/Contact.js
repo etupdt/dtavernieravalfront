@@ -51,6 +51,7 @@ export default function Contact(){
         <Center>
           <H3>Contact</H3>
           <Form name="contact" netlify>
+            <Input type="hidden" name="form-name" value="contact"/>
             <P>
               <label>Nom <Input type="text" name="nom" placeholder="Nom"/></label>
             </P>
