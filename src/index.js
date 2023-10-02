@@ -8,8 +8,13 @@ import Contact from './components/Contact/Contact';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Header from './components/Header/Header';
+import HeaderInit from './components/Header/HeaderInit';
 
 const router = createBrowserRouter([
+  {
+    path: "",
+    element: <HeaderInit/>
+  },
   {
     path :"/",
     element : <Header/>,

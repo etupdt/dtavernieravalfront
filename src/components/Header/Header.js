@@ -12,8 +12,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background: linear-gradient(to right, #fefefe, #e0e0f0);
-  border-bottom: solid black 1px;
+  background: linear-gradient(to right, #e0e0f0, #fefefe, #e0e0f0);
   @media (min-width: 700px) {
     height: 60px;
   }  
@@ -26,6 +25,7 @@ const Center = styled.div`
   width: 100%;
   margin: auto;
   z-index: 20;
+  overflow: hidden;
   background-color: transprent;
   @media (min-width: 700px) {
     align-items: center;
@@ -43,6 +43,7 @@ const Icon = styled.img`
 `
 const Title = styled.h1`
   display: none;
+  color: #47555e;
   @media (min-width: 480px) {
     display: inherit;
     font-size: 1.5em;
@@ -57,7 +58,7 @@ const Options = styled.ul`
   }  
 `
 const Li = styled.li`
-  border-bottom: ${props => ((props.select === props.label) ? 'solid black 1px' : '0') };
+  border-bottom: ${props => ((props.select === props.label) ? 'solid #47555e 2px' : '0') };
   padding: 0 12px;
   @media (min-width: 700px) {
     display: inline-block;
@@ -66,10 +67,12 @@ const Li = styled.li`
 const NavLink = styled(Link)`
   color: black;
   text-decoration: none;
+  color: #47555e;
 `
 const NavLinkAdmin = styled.a`
   color: black;
   text-decoration: none;
+  color: #47555e;
 `
 const Socials = styled.div`
   display: none;
@@ -85,6 +88,7 @@ const Social = styled.img`
   height: 20px;
   padding: 0 2px;
   display: none;
+  color: #47555e;
   @media (min-width: 700px) {
     display: inherit;
   }  
@@ -96,6 +100,11 @@ const Burger = styled.img`
   @media (min-width: 700px) {
     display: none;
   }  
+`
+const Layout = styled.div`
+  overflow: auto;
+  scroll-margin-block: initial;
+  height: calc(100vh - 60px);
 `
 
 function Header() {
@@ -133,7 +142,7 @@ function Header() {
             <Li label="Contact" select={selected} onClick={() => {changeSelect("Contact"); toggleBurger()}}>
               <NavLink to={"/Contact"}>Contact</NavLink>
             </Li>
-            <Li label="Admin" select={selected} onClick={() => {changeSelect("Admin"); toggleBurger()}}>
+            <Li label="Admin" select={selected}>
               <NavLinkAdmin href="/admin" target="_blank">Admin</NavLinkAdmin>
             </Li>
           </Options>
@@ -144,7 +153,9 @@ function Header() {
           </Socials>
         </Center>
       </Container>
-      <Outlet/>
+      <Layout>
+        <Outlet/>
+      </Layout>
     </>
   );
 }

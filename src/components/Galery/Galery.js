@@ -13,10 +13,10 @@ const Container = styled.div`
   }  
 `
 const Select = styled.select`
-  width: 150px;
   height: 30px;
   margin-top: 10px;
   font-size: 1.2em;
+  position: fixed;
 `
 const GaleryPhotos = styled.div`
   display: flex;
@@ -24,9 +24,9 @@ const GaleryPhotos = styled.div`
   justify-content: center;
   flex-flow: wrap;
   align-items: center;
-  margin: 5px 0;
+  margin: 40px 0 0 10px;
   @media (min-width: 700px) {
-    margin: auto;
+    margin: 40px auto auto 10px;
   }  
 `
 const Img = styled.img`
@@ -60,7 +60,6 @@ export default function Galery(){
   
   }
 
-
   const [categories, setCategories] = useState([]);
   const [index, setIndex] = useState(0);
 
@@ -75,7 +74,9 @@ export default function Galery(){
       return response.json();
     }).then(data => {
       data.entree.forEach((categorie) => upload(categorie))
-      setCategories(data.entree)
+      let cs = data.entree
+      cs.unshift('Tout')
+      setCategories(cs)
     }).catch(err => {
       console.log("Error Reading data " + err)
     })
@@ -96,7 +97,7 @@ export default function Galery(){
         </Select>
         <GaleryPhotos>
         {
-          photos.map(photo => categories[index] === photo.categorie ?
+          photos.map(photo => index === 0 || categories[index] === photo.categorie ?
             <Img
               src={photo.image.replace('/public', '')}
               alt={photo.image}
