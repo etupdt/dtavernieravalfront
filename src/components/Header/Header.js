@@ -134,7 +134,7 @@ function Header() {
               <NavLink to={"/Contact"}>Contact</NavLink>
             </Li>
             <Li label="Admin" select={selected} onClick={() => {changeSelect("Admin"); toggleBurger()}}>
-              <NavLinkAdmin href="/admin">Admin</NavLinkAdmin>
+              <NavLinkAdmin href="/admin" target="_blank">Admin</NavLinkAdmin>
             </Li>
           </Options>
           <Socials>

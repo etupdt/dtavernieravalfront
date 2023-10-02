@@ -2,11 +2,15 @@ import styled from "styled-components"
 import { useEffect, useState } from 'react'
 
 const Container = styled.div`
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   display: flex;
-  
+  flex-direction: column;
+  @media (min-width: 700px) {
+    flex-direction: row;
+    width: 80%;
+  }  
 `
 const Select = styled.select`
   width: 150px;
@@ -17,15 +21,24 @@ const Select = styled.select`
 const GaleryPhotos = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-flow: wrap;
-  margin: auto;
+  align-items: center;
+  margin: 5px 0;
+  @media (min-width: 700px) {
+    margin: auto;
+  }  
 `
 const Img = styled.img`
   border-radius: 10px;
-  margin: 10px;
+  margin: 10px 3px;
   box-shadow: 10px 5px 5px lightgray;
-  width: 40%;
-  height: auto;
+  width: 310px;
+  height: fit-content;
+  @media (min-width: 700px) {
+    width: 400px;
+    margin: 10px 20px;
+  }  
 `
 export default function Galery(){
 
