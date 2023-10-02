@@ -30,6 +30,7 @@ const Input = styled.input`
   padding: 10px;
   width: 100%;
   border-radius: 6px;
+  background-color: #efefff;
 `
 const Textarea = styled.textarea`
   padding: 10px;
@@ -37,6 +38,7 @@ const Textarea = styled.textarea`
   height: 200px;
   border-radius: 6px;
   border: solid black 2px;
+  background-color: #efefff;
 `
 const Button = styled.button`
   padding: 10px;

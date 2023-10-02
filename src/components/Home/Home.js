@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import image2 from '../../images/pexels-photo-1050558.webp';
+//import image from '../../images/pexels-photo.webp';
+import image from '../../images/pexels-photo-1050558.webp';
 
 const Container = styled.div`
   position: fixed;
@@ -15,8 +16,8 @@ const Img = styled.img`
   z-index: 1;
 `
 const H1 = styled.h1`
-margin-top: 0;
-font-size: 2em;
+  margin-top: 0;
+  font-size: 2em;
   color: white;
   position: fixed;
   width: 100%;
@@ -29,7 +30,7 @@ export default function Home(){
   return(
     <>
       <Container>
-        <Img src={image2} alt="" />
+        <Img src={image} alt="" />
         <H1>Charles Cantin - Photographe</H1>
       </Container>
     </>

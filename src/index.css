@@ -17,4 +17,7 @@ code {
   top: 0;
   height: 100%;
   width: 100%;
+  background: #fbf1e9;
+  /* background: linear-gradient(to bottom right, #fdd324, #fe9a00);*/
+  /* fdd324   #fbf1e9  */
 }
