@@ -12,7 +12,8 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: lightgreen;
+  background: linear-gradient(to right, #fefefe, #e0e0f0);
+  border-bottom: solid black 1px;
   @media (min-width: 700px) {
     height: 60px;
   }  
@@ -24,8 +25,8 @@ const Center = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: auto;
-  background-color: lightgreen;
   z-index: 20;
+  background-color: transprent;
   @media (min-width: 700px) {
     align-items: center;
     height: 60px;
@@ -63,6 +64,10 @@ const Li = styled.li`
   }  
 `
 const NavLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+`
+const NavLinkAdmin = styled.a`
   color: black;
   text-decoration: none;
 `
@@ -127,6 +132,9 @@ function Header() {
             </Li>
             <Li label="Contact" select={selected} onClick={() => {changeSelect("Contact"); toggleBurger()}}>
               <NavLink to={"/Contact"}>Contact</NavLink>
+            </Li>
+            <Li label="Admin" select={selected} onClick={() => {changeSelect("Admin"); toggleBurger()}}>
+              <NavLinkAdmin href="/admin">Admin</NavLinkAdmin>
             </Li>
           </Options>
           <Socials>

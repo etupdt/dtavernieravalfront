@@ -4,26 +4,6 @@ backend:
 media_folder: "public/images" 
 #media_library: "/images/uploads"
 collections: 
-  - name: "post"
-    label: "Posts"
-    label_singular: "Post"
-    folder: "example/data/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "json"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - label: "Media"
-        name: "media"
-        widget: "image"
-        allow_multiple: true
-        media_library:
-          config:
-            multiple: true
-      - { label: "Location", name: "location", type: "Point", widget: "map", required: false }
-      - { label: "Body", name: "body", widget: "text", required: false }
   - name: categories
     label: Catégories
     widget: list
