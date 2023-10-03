@@ -13,6 +13,7 @@ const Container = styled.div`
   justify-content: space-between;
   width: 100%;
   background: linear-gradient(to right, #e0e0f0, #fefefe, #e0e0f0);
+  border-bottom: solid black 1px;
   @media (min-width: 700px) {
     height: 60px;
   }  

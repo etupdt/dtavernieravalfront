@@ -15,18 +15,32 @@ const Container = styled.div`
 const Select = styled.select`
   height: 30px;
   margin-top: 10px;
+  margin-left: 10px;
   font-size: 1.2em;
   position: fixed;
 `
 const GaleryPhotos = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  flex-flow: wrap;
-  align-items: center;
-  margin: 40px 0 0 10px;
+  margin: 40px 0;
   @media (min-width: 700px) {
-    margin: 40px auto auto 10px;
+    margin: 40px auto;
+    margin-bottom: 10px;
+  }  
+  @media (min-width: 1100px) {
+    flex-direction: row;
+  }  
+`
+const GaleryColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 700px) {
+    margin-bottom: 10px;
+  }  
+  @media (min-width: 1100px) {
+    width: 50%;
   }  
 `
 const Img = styled.img`
@@ -36,8 +50,8 @@ const Img = styled.img`
   width: 310px;
   height: fit-content;
   @media (min-width: 700px) {
+    margin: 15px 18px;
     width: 400px;
-    margin: 10px 20px;
   }  
 `
 export default function Galery(){
@@ -96,15 +110,30 @@ export default function Galery(){
         }
         </Select>
         <GaleryPhotos>
-        {
-          photos.map(photo => index === 0 || categories[index] === photo.categorie ?
-            <Img
-              src={photo.image.replace('/public', '')}
-              alt={photo.image}
-            />  
-            : null
-          )
-        }
+          <GaleryColumn>
+            {
+              photos.map((photo, i) => (index === 0 || categories[index] === photo.categorie) &&
+                                       (i % 2 === 0) ?
+                <Img
+                  src={photo.image.replace('/public', '')}
+                  alt={photo.image}
+                />  
+                : null
+              )
+            }
+          </GaleryColumn>
+          <GaleryColumn>
+            {
+              photos.map((photo, i) => (index === 0 || categories[index] === photo.categorie) &&
+              (i % 2 === 1) ?
+                <Img
+                  src={photo.image.replace('/public', '')}
+                  alt={photo.image}
+                />  
+                : null
+              )
+            }
+          </GaleryColumn>
         </GaleryPhotos>
       </Container>
     </>

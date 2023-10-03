@@ -2,8 +2,12 @@ import styled from "styled-components"
 
 const Container = styled.div`
   width: 100%;
-  max-width: 1200px;
+  height: 100%;
   margin: auto;
+  max-width: 1200px;
+  display: flex;
+  flex:direction: column;
+  align-items:center;
 `
 const Center = styled.div`
   width: 90%;

@@ -7,7 +7,7 @@ const Container = styled.div`
   width: max-content;
   display: grid;
   place-items: center;
-  top: 60px;
+  top: 61px;
   max-height: 100vh;
   `
 const Img = styled.img`
