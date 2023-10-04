@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { useEffect, useState } from 'react'
 
 const Container = styled.div`
   width: 100%;
@@ -38,13 +39,42 @@ const Tarif = styled.li`
 `
 
 export default function Tarifs(){
+
+  const [tarifs, setTarifs] = useState([]);
+
+  useEffect(() => {
+
+    fetch('/tarifs/tarifs.json').then(response => {
+      return response.json();
+    }).then(data => {
+      setTarifs(data)
+    }).catch(err => {
+      console.log("Error Reading data " + err)
+    })
+  }, [])
+
   return(
     <>
       <Container>
         <Center>
           <H3>Tarifs et préstations</H3>
           <Ul>
-            <Tarif>
+            {
+              tarifs.map((tarif) => 
+                <Tarif>
+                  {tarif.title} : {tarif.price} €
+                  <P>{tarif.description}</P>
+                </Tarif>
+              )
+            }
+          </Ul>
+        </Center>
+      </Container>
+    </>
+  )
+}
+
+/*            <Tarif>
               Juste moi : 130 €
               <P>Séance pour une personne, en extérieur ou en studio</P>
             </Tarif>
@@ -67,10 +97,4 @@ export default function Tarifs(){
             <Tarif>
               J’immortalise l’événement : 100 €
               <P>Prestation de mariage ou baptême sur devis</P>
-          </Tarif>
-          </Ul>
-        </Center>
-      </Container>
-    </>
-  )
-}
+          </Tarif>*/
