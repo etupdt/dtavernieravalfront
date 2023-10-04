@@ -5,9 +5,14 @@ const Container = styled.div`
   height: 100%;
   max-width: 1200px;
   margin: auto;
+  margin-left: 5px;
   display: flex;
   flex:direction: column;
-  align-items:center;
+  align-items:start;
+  @media (min-width: 700px) {
+    margin: auto;
+    align-items:center;
+  }  
 `
 const Center = styled.div`
   width: 90%;

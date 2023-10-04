@@ -7,7 +7,10 @@ const Container = styled.div`
   max-width: 1200px;
   display: flex;
   flex:direction: column;
-  align-items:center;
+  align-items:start;
+  @media (min-width: 700px) {
+    align-items:center;
+  }  
 `
 const Center = styled.div`
   width: 90%;
