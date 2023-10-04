@@ -47,7 +47,7 @@ export default function Tarifs(){
     fetch('/tarifs/tarifs.json').then(response => {
       return response.json();
     }).then(data => {
-      setTarifs(data.tarifs)
+      setTarifs(data.tarif)
     }).catch(err => {
       console.log("Error Reading data " + err)
     })
@@ -62,7 +62,7 @@ export default function Tarifs(){
             {
               tarifs.map((tarif) => 
                 <Tarif>
-                  {tarif.title} : {tarif.price} €
+                  {tarif.title} : {tarif.price}
                   <P>{tarif.description}</P>
                 </Tarif>
               )
@@ -73,28 +73,3 @@ export default function Tarifs(){
     </>
   )
 }
-
-/*            <Tarif>
-              Juste moi : 130 €
-              <P>Séance pour une personne, en extérieur ou en studio</P>
-            </Tarif>
-            <Tarif>
-              Pour deux : 195 €
-              <P>Pour deux personnes, en extérieur ou en studio</P>
-            </Tarif>
-            <Tarif>
-              Famille : 220 €
-              <P>Pour la famille ou les amis jusqu’à 4 personnes, en extérieur ou en studio 30 euros en supplément par personne au-delà de 4 (hormis enfant jusqu’à 2 ans)</P>
-            </Tarif>
-            <Tarif>
-              Il était une fois : 160 €
-              <P>Photo de grossesse (À votre domicile, en extérieur ou en studio)</P>
-            </Tarif>
-            <Tarif>
-              Mon bébé : 160 €
-              <P>Photo d’enfant jusqu’à 3 ans (photo à domicile)</P>
-            </Tarif>
-            <Tarif>
-              J’immortalise l’événement : 100 €
-              <P>Prestation de mariage ou baptême sur devis</P>
-          </Tarif>*/
