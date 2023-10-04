@@ -47,7 +47,7 @@ export default function Tarifs(){
     fetch('/tarifs/tarifs.json').then(response => {
       return response.json();
     }).then(data => {
-      setTarifs(data)
+      setTarifs(data.tarifs)
     }).catch(err => {
       console.log("Error Reading data " + err)
     })

@@ -40,6 +40,9 @@ collections:
     create: true
     extension: "json"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Prix", name: "price", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
+      - label: "Liste des tarifs"
+        name: "tarifs"
+        fields:
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Prix", name: "price", widget: "string"}
+        - {label: "Description", name: "description", widget: "string"}
