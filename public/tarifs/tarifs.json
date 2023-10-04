@@ -1,1 +1,14 @@
-{}
+{
+  "tarif": [
+    {
+      "title": "Juste moi",
+      "price": "130",
+      "description": "Séance pour une personne, en extérieur ou en studio"
+    },
+    {
+      "title": "Pour deux",
+      "price": "195",
+      "description": "Pour deux personnes, en extérieur ou en studio"
+    }
+  ]
+}
