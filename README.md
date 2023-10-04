@@ -41,3 +41,16 @@ Le site comprend une barre de navigation en haut de l"écran qui comprend, lui m
   - Les catégories en sélectionnabt l'option du menu correspondante et en ajoutant la ou les catégories séparées par des virgules. On peut également en supprimer.
   - Les photos en les choisissant dans la médiathèque, qui permet elle même d'uploader de nouvelles photos. Les éléments ainsi séléctionnés doivent être publiés par le bouton éponyme. Ils sont alors visualisables dans la page Galerie du site.
 
+Pour accéder à la page d'admin :
+
+- accédez au site avec le lien du document pdf.
+- cliquer sur l'onglet admin.
+- cliquer sur "Login with Netlify Identity".
+- si vous êtes déjà inscrit :
+  - cliquez sur "Sign in".
+  - saisissez votre mail, mot de passe et validez.
+- sinon 
+  - cliquez sur "Sign up".
+  - Saisissez votre nom, email, mot de passe et validez.
+  - Confirmez le mail que vous avez reçu.
+- Vous êtes connecté et pouvez modifier le paramètrage.
