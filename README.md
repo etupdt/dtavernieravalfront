@@ -1,70 +1,43 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 04/10/2023
 
-## Available Scripts
+## Table Content
 
-In the project directory, you can run:
+1. Informations Générales
+2. Langage et Framework
+3. installation
+4. Mode d'emploi
 
-### `npm start`
+## 1/ Informations Générales
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Évaluation d'entraînement - Développer la partie front-end d’une application web
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 2/ Langage et Framework
 
-### `npm test`
+- Maquettes : Réalisées avec Figma
+- IDE : Visual Studio Code
+- Langage : HTML, CSS, javascript
+- Framework : React.Js
+- Versionning : GitHub
+- CMS : Decap CMS (anciennement Netlify CMS)
+- Hébergeur : Netlify
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3/ installation 
 
-### `npm run build`
+```
+$ git clone https://github.com/etupdt/dtavernieravalfront.git
+$ cd dtavernierevaljavascript
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 4/ Mode d'emploi :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Le site comprend une barre de navigation en haut de l"écran qui comprend, lui même, 5 onglets permettant d'accéder aux 5 pages du portfolio.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Accueil : c'est la page qui s'affiche lorsqu'on arrive sur le site et qui donne le nom de l'auteur.
+- Galerie : C'est la page d'affichage des photos qui compred une listBox de filtre par catégorie.
+- Tarifs : Simple page d'affichage des tarifs.
+- Contact : Formulaire de contact qui permet au visiteur de laisser un message et une adresse mail où il peut être contacté.
+- Admin : C'est la page d'administration qui permet de saisr de nouvelles catégories et les photos associées. Elle s'ouvre dans un nouvel onglet du navigateur et permet de s'identifier pour arriver à l'interface. On peut y saisir :
+  - Les catégories en sélectionnabt l'option du menu correspondante et en ajoutant la ou les catégories séparées par des virgules. On peut également en supprimer.
+  - Les photos en les choisissant dans la médiathèque, qui permet elle même d'uploader de nouvelles photos. Les éléments ainsi séléctionnés doivent être publiés par le bouton éponyme. Ils sont alors visualisables dans la page Galerie du site.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
