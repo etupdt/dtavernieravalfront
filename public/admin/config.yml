@@ -36,13 +36,16 @@ collections:
             multiple: true
   - label: "Tarifs"
     name: "tarifs"
-    folder: "public/tarifs"
-    create: true
-    extension: "json"
-    fields:
-      - label: "Liste des tarifs"
+    files:
+      - label: "tarifs"
         name: "tarifs"
+        file: "public/tarifs/tarifs.json"
+        extension: "json"
         fields:
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Prix", name: "price", widget: "string"}
-        - {label: "Description", name: "description", widget: "string"}
+          - label: "Tarif"
+            name: "tarif"
+            widget: list
+            fields: 
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Prix", name: "price", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
