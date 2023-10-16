@@ -61,10 +61,8 @@ export default function Galery(){
   const upload = (categorie) => {
 
     fetch('photos/' + categorie + '.json').then(response => {
-      console.log(response);
       return response.json();
     }).then(data => {
-      console.log('photo', data);
       data.photos.forEach((image) => {
         setPhotos(photos => [...photos, {'categorie': categorie, 'image': image}])
       })
@@ -78,7 +76,6 @@ export default function Galery(){
   const [index, setIndex] = useState(0);
 
   const changeCategorie = (index) => {
-    console.log(index)
     setIndex(index)
   }
 

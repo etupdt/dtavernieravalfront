@@ -65,7 +65,6 @@ function App() {
   const [selected, setSelected] = useState("Accueil");
 
   const changeSelect = (option) => {
-    console.log('option', option)
     setSelected(option)
   }
 
